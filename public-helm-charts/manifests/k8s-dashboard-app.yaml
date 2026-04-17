@@ -7,14 +7,10 @@ spec:
   project: default
 
   source:
-    repoURL: https://kubernetes.github.io/dashboard/helm-charts/
+    repoURL: oci://registry-1.docker.io/k8s-dashboard
     chart: kubernetes-dashboard
     targetRevision: 7.13.0
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: k8s-dashboard
-
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
+    namespace: kubernetes-dashboard
